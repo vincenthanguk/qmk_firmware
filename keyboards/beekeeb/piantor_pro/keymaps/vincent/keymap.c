@@ -47,9 +47,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       XXXXXXX, XXXXXXX, KC_1,   KC_2,    KC_3,    XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, S(KC_SCLN), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, KC_4,   KC_5,    KC_6,    XXXXXXX,                      XXXXXXX, S(KC_G), KC_LCTL, KC_LALT, KC_SCLN, XXXXXXX,
+      XXXXXXX, XXXXXXX, KC_4,   KC_5,    KC_6,    XXXXXXX,                      XXXXXXX, S(KC_G), KC_LCTL, KC_LALT, MT(MOD_LSFT, KC_SCLN), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, KC_7,   KC_8,    KC_9,    XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, S(KC_COMM), S(KC_DOT), XXXXXXX,
+      XXXXXXX, XXXXXXX, KC_7,   KC_8,    KC_9,    XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, KC_COMM, KC_DOT, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                          _______, _______,  _______,   _______,  _______, _______
                                       //`--------------------------'  `--------------------------'
@@ -78,9 +78,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
     [6] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, RALT(S(KC_Q)), RALT(KC_5), RALT(S(KC_S)), XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, RALT(S(KC_Y)), XXXXXXX, XXXXXXX, RALT(S(KC_P)),
+      XXXXXXX, RALT(S(KC_Q)), RALT(KC_5), RALT(S(KC_S)), XXXXXXX, XXXXXXX,      XXXXXXX, XXXXXXX, RALT(S(KC_Y)), XXXXXXX, RALT(S(KC_P)), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, RALT(KC_Q), XXXXXXX, RALT(KC_S), XXXXXXX, XXXXXXX,               XXXXXXX, XXXXXXX, RALT(KC_Y), XXXXXXX, XXXXXXX, RALT(KC_P),
+      XXXXXXX, RALT(KC_Q), XXXXXXX, RALT(KC_S), XXXXXXX, XXXXXXX,               XXXXXXX, XXXXXXX, RALT(KC_Y), XXXXXXX, RALT(KC_P), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -91,7 +91,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       XXXXXXX, MS_WHLU, MS_WHLL, MS_UP, MS_WHLR, XXXXXXX,                        XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, MS_WHLD, MS_LEFT, MS_DOWN, MS_RIGHT, XXXXXXX,                     XXXXXXX, MS_BTN1, KC_LCTL, KC_LALT, KC_LSFT, XXXXXXX,
+      XXXXXXX, MS_WHLD, MS_LEFT, MS_DOWN, MS_RGHT, XXXXXXX,                     XXXXXXX, MS_BTN1, KC_LCTL, KC_LALT, KC_LSFT, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, MS_BTN2, MS_BTN3, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -105,8 +105,8 @@ const uint16_t PROGMEM combo2[] = {LT(1, KC_SPC), LT(4, KC_TAB), COMBO_END};
 const uint16_t PROGMEM combo3[] = {LT(3, KC_ENT), LT(2, KC_BSPC), COMBO_END};
 const uint16_t PROGMEM combo4[] = {KC_F, KC_P, COMBO_END};
 combo_t key_combos[] = {
-    COMBO(combo1, LT(7)),
-    COMBO(combo2, LT(8)),
-    COMBO(combo3, LT(4)),
+    COMBO(combo1, MO(7)),
+    COMBO(combo2, MO(8)),
+    COMBO(combo3, MO(4)),
     COMBO(combo4, KC_GRV),
-}
+};
