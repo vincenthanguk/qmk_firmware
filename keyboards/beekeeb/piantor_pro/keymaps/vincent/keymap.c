@@ -51,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, XXXXXXX, KC_7,   KC_8,    KC_9,    XXXXXXX,                      XXXXXXX, XXXXXXX, KC_COMM, KC_DOT, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                         _______, _______,  _______,   _______,  _______, _______
+                                         _______, KC_0,  _______,   _______,  _______, _______
                                       //`--------------------------'  `--------------------------'
   ),
     [4] = LAYOUT_split_3x6_3(
@@ -109,4 +109,18 @@ combo_t key_combos[] = {
     COMBO(combo2, MO(8)),
     COMBO(combo3, MO(4)),
     COMBO(combo4, KC_GRV),
+};
+
+bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case SFT_T(KC_A):
+            // Immediately select the hold action when another key is tapped.
+            return true;
+        case SFT_T(KC_O):
+            // Immediately select the hold action when another key is tapped.
+            return true;
+        default:
+            // Do not select the hold action when another key is tapped.
+            return false;
+    }
 };
