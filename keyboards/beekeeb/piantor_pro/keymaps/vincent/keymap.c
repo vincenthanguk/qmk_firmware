@@ -21,9 +21,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, KC_PGUP, KC_HOME,  KC_UP,  KC_END, KC_GRAVE,                     A(KC_INS),XXXXXXX, XXXXXXX, XXXXXXX, KC_LGUI, XXXXXXX,
+      XXXXXXX, C(KC_U), KC_HOME,  KC_UP,  KC_END, KC_GRAVE,                     A(KC_INS),XXXXXXX, XXXXXXX, XXXXXXX, KC_LGUI, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, KC_PGDN, KC_LEFT, KC_DOWN, KC_RIGHT,C(KC_S),                      XXXXXXX, A(KC_W), KC_LCTL, KC_LALT, KC_LSFT, XXXXXXX,
+      XXXXXXX, C(KC_D), KC_LEFT, KC_DOWN, KC_RIGHT,C(KC_S),                      XXXXXXX, A(KC_W), KC_LCTL, KC_LALT, KC_LSFT, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       XXXXXXX, C(KC_A), C(KC_X), C(KC_C), C(KC_V), C(KC_Z),                      C(KC_Y), XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
@@ -45,11 +45,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [3] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, C(KC_U), KC_1,   KC_2,    KC_3,    XXXXXXX,                      KC_J, XXXXXXX, XXXXXXX, XXXXXXX, S(KC_SCLN), XXXXXXX,
+      XXXXXXX, KC_PGUP, KC_1,   KC_2,    KC_3,    XXXXXXX,                      KC_J, XXXXXXX, XXXXXXX, XXXXXXX, S(KC_SCLN), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, C(KC_D), KC_4,   KC_5,    KC_6,    XXXXXXX,                      XXXXXXX, S(KC_G), KC_LCTL, KC_LALT, MT(MOD_LSFT, KC_SCLN), XXXXXXX,
+      XXXXXXX, KC_PGDN, KC_4,   KC_5,    KC_6,    XXXXXXX,                      XXXXXXX, S(KC_G), KC_LCTL, KC_LALT, MT(MOD_LSFT, KC_SCLN), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, KC_7,   KC_8,    KC_9,    XXXXXXX,                      KC_K, XXXXXXX, KC_COMM, KC_DOT, XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, KC_7,   KC_8,    KC_9,    XXXXXXX,                      KC_K, XXXXXXX, KC_COMM, KC_DOT, MO(2), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                          _______, KC_0,  _______,   _______,  _______, _______
                                       //`--------------------------'  `--------------------------'
@@ -99,14 +99,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
   )
 };
-
 const uint16_t PROGMEM combo1[] = {LT(1, KC_SPC), LT(2, KC_BSPC), COMBO_END};
 const uint16_t PROGMEM combo2[] = {LT(3, KC_ENT), LT(2, KC_BSPC), COMBO_END};
 const uint16_t PROGMEM combo3[] = {KC_F, KC_P, COMBO_END};
+const uint16_t PROGMEM combo4[] = {LT(1, KC_SPC),  LT(4, KC_TAB), COMBO_END};
 combo_t key_combos[] = {
     COMBO(combo1, MO(7)),
     COMBO(combo2, MO(4)),
     COMBO(combo3, KC_GRV),
+    COMBO(combo4, MO(3)),
 };
 
 bool get_permissive_hold(uint16_t keycode, keyrecord_t *record) {
