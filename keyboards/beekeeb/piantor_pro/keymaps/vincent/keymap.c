@@ -32,11 +32,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
     [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      XXXXXXX, KC_BSLS, S(KC_6), S(KC_LBRC), S(KC_RBRC), S(KC_4),          S(KC_3), S(KC_8), S(KC_7), S(KC_BSLS), S(KC_SCLN), XXXXXXX,
+      XXXXXXX, KC_BSLS, S(KC_6), S(KC_LBRC), S(KC_RBRC), S(KC_4),          S(KC_3), S(KC_8), S(KC_7), S(KC_BSLS), S(KC_QUOTE), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, KC_LBRC, KC_RBRC, S(KC_9), S(KC_0), S(KC_QUOTE),                  S(KC_EQL), KC_EQL, KC_MINS, KC_GRV, KC_SCLN, XXXXXXX,
+      XXXXXXX, KC_LBRC, KC_RBRC, S(KC_9), S(KC_0), XXXXXXX,                  S(KC_EQL), KC_EQL, KC_SCLN, S(KC_SCLN), KC_GRV, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      XXXXXXX, XXXXXXX, XXXXXXX, S(KC_COMM), S(KC_DOT), S(KC_2),            S(KC_5), S(KC_1), S(KC_MINS), S(KC_GRV), XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, XXXXXXX, S(KC_COMM), S(KC_DOT), S(KC_2),            S(KC_5), KC_MINS, S(KC_MINS), S(KC_GRV), S(KC_1), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                          _______, _______,  _______,   _______,  _______, _______
                                       //`--------------------------'  `--------------------------'
